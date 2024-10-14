@@ -1,43 +1,86 @@
 <ion-header [translucent]="true">
-  <ion-toolbar style="background-color: #2C3E50;">
-    <ion-title style="color: #FFFFFF; font-weight: bold;">
+  <ion-toolbar class="custom-toolbar">
+    <!-- Botón de menú hamburguesa a la izquierda -->
+    <ion-buttons slot="start">
+      <ion-menu-button autoHide="false" class="menu-button"></ion-menu-button>
+    </ion-buttons>
+
+    <ion-title class="custom-title">
       Safety City
     </ion-title>
-    <ion-buttons slot="end">
-      <ion-button 
-        size="default" 
-        [routerLink]="['/login']" 
-        style="margin-left: 10px; border-radius: 5px; background-color: white; border: 2px solid #34495E; color: #34495E;">
-        Iniciar sesión
-      </ion-button>
-    </ion-buttons>
   </ion-toolbar>
 </ion-header>
 
-<ion-content [fullscreen]="true" style="background-color: #ECF0F1; color: #333;">
-  <div style="text-align: center; margin-top: 10%;">
-    <h1 style="font-size: 2rem; font-weight: bold;">Safety City</h1>
-    <p style="font-size: 1rem; margin: 10px 0;">Seguridad en tus manos...</p>
+<!-- Menú lateral -->
+<ion-menu contentId="main-content">
+  <ion-header>
+    <ion-toolbar>
+      <ion-title>Menú</ion-title>
+      <ion-buttons slot="start">
+        <ion-menu-button autoHide="false" class="menu-button"></ion-menu-button>
+      </ion-buttons>
+    </ion-toolbar>
+  </ion-header>
+  <ion-content>
+    <!-- Contenido del menú -->
+    <ion-list>
+      <ion-item [routerLink]="['/home']">Inicio</ion-item>
+      <ion-item [routerLink]="['/login']">Iniciar Sesion</ion-item>
+      <ion-item [routerLink]="['/QnSomos']">Quienes somos?</ion-item>
+    </ion-list>
+  </ion-content>
+  <ion-footer class="menu-footer">
+    <div class="footer-menu-content">
+      <div>© 2024 Safety City</div>
+      <div class="social-icons">
+        <ion-icon name="logo-instagram"></ion-icon>
+        <ion-icon name="logo-facebook"></ion-icon>
+        <ion-icon name="logo-whatsapp"></ion-icon>
+        <ion-icon name="logo-twitter"></ion-icon>
+      </div>
+    </div>
+  </ion-footer>
+</ion-menu>
 
-    <div style="display: flex; justify-content: center; flex-wrap: wrap; margin: 20px 0;">
-      <ion-button size="large" style="margin: 10px; background-color: #34495E; color: #fff;">
+<!-- Contenido principal -->
+<div class="ion-page" id="main-content">
+  <ion-content>
+    <!-- Aquí va el contenido de la página -->
+  </ion-content>
+</div>
+
+<ion-content [fullscreen]="true" class="main-content">
+  <div class="content-container">
+    <h1 class="main-title">Safety City</h1>
+    <p class="main-subtitle">Seguridad en tus manos...</p>
+
+    <div class="button-group">
+      <ion-button size="large" class="custom-button">
         Información
       </ion-button>
-      <ion-button size="large" style="margin: 10px; background-color: #34495E; color: #fff;">
+      <ion-button size="large" class="custom-button">
         Personas
       </ion-button>
-      <ion-button size="large" style="margin: 10px; background-color: #34495E; color: #fff;">
+      <ion-button size="large" class="custom-button">
         Colaboradores
       </ion-button>
     </div>
 
-    <div style="margin-top: 20px;">
-      <h2 style="font-size: 1.5rem; color: #2C3E50;">Mostrar imagen de la app</h2>
-      <img src="https://example.com/app-image.png" alt="App Imagen" style="width: 200px; height: auto; border-radius: 10px; box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);">
+    <div class="image-section">
+      <h2 class="image-title">Mostrar imagen de la app</h2>
+      <img src="https://example.com/app-image.png" alt="App Imagen" class="app-image">
     </div>
   </div>
 </ion-content>
 
-<ion-footer style="background-color: #2C3E50; height: 50px; display: flex; align-items: center; justify-content: center;">
-  <div style="color: white;">© 2024 Safety City</div>
+<ion-footer class="custom-footer">
+  <div class="footer-content">
+    <div>© 2024 Safety City</div>
+    <div class="social-icons">
+      <ion-icon name="logo-instagram"></ion-icon>
+      <ion-icon name="logo-facebook"></ion-icon>
+      <ion-icon name="logo-whatsapp"></ion-icon>
+      <ion-icon name="logo-twitter"></ion-icon>
+    </div>
+  </div>
 </ion-footer>
