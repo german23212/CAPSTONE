@@ -1,3 +1,4 @@
+<ion-button [routerLink]="['/home']">Volver</ion-button>
 <ion-content class="ion-padding">
   <div class="login-container">
     <h1 class="main-titulo">Iniciar sesión</h1>
@@ -38,7 +39,7 @@
     </div>
 
     <div class="registro-text">
-      <p>No tienes una cuenta? <a href="#">Regístrate aquí</a></p>
+      <p>No tienes una cuenta? <a [routerLink]="['/registro']">Regístrate aquí</a></p>
     </div>
   </div>
 </ion-content>
