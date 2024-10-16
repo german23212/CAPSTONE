@@ -1,0 +1,94 @@
+<ion-header [translucent]="true">
+  <ion-toolbar class="custom-toolbar">
+    <!-- Botón de menú hamburguesa a la izquierda -->
+    <ion-buttons slot="start">
+      <ion-menu-button autoHide="false" class="menu-button"></ion-menu-button>
+    </ion-buttons>
+
+    <ion-title class="custom-title">
+      Safety City
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<!-- Menú lateral -->
+<ion-menu contentId="login-content"> <!-- Asegúrate de que el contentId coincida con el id del contenido principal -->
+  <ion-header>
+    <ion-toolbar>
+      <ion-title>Menú</ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+  <ion-content>
+    <!-- Contenido del menú -->
+    <ion-list>
+      <ion-item [routerLink]="['/home']">Inicio</ion-item>
+      <ion-item [routerLink]="['/login']">Iniciar Sesión</ion-item>
+      <ion-item [routerLink]="['/QnSomos']">¿Quiénes somos?</ion-item>
+    </ion-list>
+  </ion-content>
+
+  <ion-footer class="menu-footer">
+    <div class="footer-menu-content">
+      <div>© 2024 Safety City</div>
+      <div class="social-icons">
+        <ion-icon name="logo-instagram"></ion-icon>
+        <ion-icon name="logo-facebook"></ion-icon>
+        <ion-icon name="logo-whatsapp"></ion-icon>
+        <ion-icon name="logo-twitter"></ion-icon>
+      </div>
+    </div>
+  </ion-footer>
+</ion-menu>
+
+<!-- Contenido principal -->
+<ion-content class="ion-padding" id="login-content"> <!-- id ahora correctamente asignado en ion-content -->
+  <div class="login-container">
+    <h1 class="main-titulo">Iniciar sesión</h1>
+
+    <div class="form-container">
+      <h2 class="subtitle">INICIO DE SESIÓN POR CORREO</h2>
+      <h3 class="title">Iniciar sesión</h3>
+
+      <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+        <!-- Email -->
+        <ion-item>
+          <ion-label position="floating">Email</ion-label>
+          <ion-input type="email" formControlName="email"></ion-input>
+          <ion-icon name="mail-outline" slot="end"></ion-icon>
+        </ion-item>
+        <ion-text color="danger" *ngIf="formControls['email'].invalid && formControls['email'].touched">
+          El email es requerido y debe ser un formato válido.
+        </ion-text>
+
+        <!-- Contraseña -->
+        <ion-item>
+          <ion-label position="floating">Contraseña</ion-label>
+          <ion-input type="password" formControlName="password"></ion-input>
+          <ion-icon name="lock-closed-outline" slot="end"></ion-icon>
+        </ion-item>
+        <ion-text color="danger" *ngIf="formControls['password'].invalid && formControls['password'].touched">
+          La contraseña es requerida y debe tener al menos 6 caracteres.
+        </ion-text>
+
+        <!-- Botón de Inicio de Sesión -->
+        <ion-button expand="block" class="login-button" type="submit" [disabled]="loginForm.invalid">Iniciar sesión</ion-button>
+
+        <!-- Otras opciones -->
+        <div class="recuperar-contra">
+          <a href="#">¿Olvidó su contraseña?</a>
+        </div>
+
+        <!-- Google Login -->
+        <ion-button expand="block" fill="outline" class="boton-inicio">
+          <ion-icon name="logo-google" slot="start"></ion-icon>
+          Iniciar sesión con Google
+        </ion-button>
+      </form>
+
+      <div class="registro-text">
+        <p>No tienes una cuenta? <a [routerLink]="['/registro']">Regístrate aquí</a></p>
+      </div>
+    </div>
+  </div>
+</ion-content>
