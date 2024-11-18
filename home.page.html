@@ -1,57 +1,98 @@
-<ion-header [translucent]="true">
+<ion-menu contentId="main-content">
+  <!-- Encabezado del menú g-->
+  <ion-header>
+    <ion-toolbar>
+      <ion-title>Menú</ion-title>
+      <ion-buttons slot="start">
+        <ion-menu-button autoHide="false" class="menu-button"></ion-menu-button>
+      </ion-buttons>
+    </ion-toolbar>
+  </ion-header>
+
+  <!-- Contenido del menú -->
+  <ion-content>
+    <ion-list>
+      <ion-item [routerLink]="['/home']">Inicio</ion-item>
+      <ion-item [routerLink]="['/login']">Iniciar Sesión</ion-item>
+      <ion-item [routerLink]="['/QnSomos']">¿Quiénes somos?</ion-item>
+    </ion-list>
+  </ion-content>
+
+  <!-- Footer del menú -->
+  <ion-footer class="menu-footer">
+    <div class="footer-menu-content">
+      <div>© 2024 Safe City</div>
+      <div class="social-icons">
+        <ion-icon name="logo-instagram"></ion-icon>
+        <ion-icon name="logo-facebook"></ion-icon>
+        <ion-icon name="logo-whatsapp"></ion-icon>
+        <ion-icon name="logo-twitter"></ion-icon>
+      </div>
+    </div>
+  </ion-footer>
+</ion-menu>
+
+<ion-header translucent>
   <ion-toolbar class="custom-toolbar">
-    <!-- Botón de menú hamburguesa a la izquierda -->
     <ion-buttons slot="start">
       <ion-menu-button autoHide="false" class="menu-button"></ion-menu-button>
     </ion-buttons>
-
-    <ion-title class="custom-title">
-      Safety City
-    </ion-title>
+    <ion-title class="custom-title">Safe City</ion-title>
+    <ion-buttons slot="end">
+      <ion-icon name="notifications-outline" class="icon-notification"></ion-icon>
+    </ion-buttons>
   </ion-toolbar>
 </ion-header>
 
-<ion-content [fullscreen]="true" class="main-content">
-  <div class="content-container">
-    <!-- Barra de búsqueda -->
-    <ion-searchbar
-      class="custom-searchbar"
-      placeholder="Buscar..."
-      showCancelButton="focus"
-      cancelButtonText="Cancelar"
-    ></ion-searchbar>
+<ion-content id="main-content" fullscreen class="main-content">
+  <!-- Fondo dinámico -->
+  <div class="background-gradient"></div>
 
-    <!-- Resultados de búsqueda -->
-    <ion-list>
-      <ion-item class="search-item" >
-      </ion-item>
-    </ion-list>
+  <!-- Hero Section -->
+  <div class="hero-section">
+    <h1 class="hero-title">Safe city</h1>
+    <p class="hero-subtitle">
+      Innovamos para protegerte. La seguridad esta en tus manos.
+    </p>
+  </div>
 
-    <h1 class="main-title">Safety City</h1>
-    <p class="main-subtitle">Seguridad en tus manos...</p>
+  <!-- Funcionalidades destacadas -->
+  <div class="features-section">
+    <ion-card class="custom-card" [routerLink]="['####']">
+      <ion-icon name="information-circle-outline" class="card-icon"></ion-icon>
+      <ion-card-title>Información</ion-card-title>
+      <ion-card-content>
+        Accede a datos relevantes sobre tu seguridad y entorno.
+      </ion-card-content>
+    </ion-card>
 
-    <div class="button-group">
-      <ion-button size="large" class="custom-button">
-        Información
-      </ion-button>
-      <ion-button size="large" class="custom-button">
-        Personas
-      </ion-button>
-      <ion-button size="large" class="custom-button">
-        Colaboradores
-      </ion-button>
-    </div>
+    <ion-card class="custom-card" [routerLink]="['####']" >
+      <ion-icon name="people-outline" class="card-icon"></ion-icon>
+      <ion-card-title>Personas</ion-card-title>
+      <ion-card-content>
+        Conecta con tu comunidad para compartir datos en tiempo real.
+      </ion-card-content>
+    </ion-card>
+
+    <ion-card  class="custom-card" [routerLink]="['####']">
+      <ion-icon name="shield-checkmark-outline" class="card-icon"></ion-icon>
+      <ion-card-title >Colaboradores</ion-card-title>
+      <ion-card-content>
+        Descubre a quienes trabajan para mantener tu seguridad.
+      </ion-card-content>
+    </ion-card>
   </div>
 </ion-content>
 
-<ion-footer class="custom-footer">
-  <div class="footer-content">
-    <div>© 2024 Safety City</div>
-    <div class="social-icons">
-      <ion-icon name="logo-instagram"></ion-icon>
-      <ion-icon name="logo-facebook"></ion-icon>
-      <ion-icon name="logo-whatsapp"></ion-icon>
-      <ion-icon name="logo-twitter"></ion-icon>
+  <ion-footer class="custom-footer">
+    <div class="footer-content">
+      <div>© 2024 Safe City</div>
+      <div class="social-icons">
+        <ion-icon name="logo-instagram"></ion-icon>
+        <ion-icon name="logo-facebook"></ion-icon>
+        <ion-icon name="logo-whatsapp"></ion-icon>
+        <ion-icon name="logo-twitter"></ion-icon>
+      </div>
     </div>
-  </div>
-</ion-footer>
+  </ion-footer>
+

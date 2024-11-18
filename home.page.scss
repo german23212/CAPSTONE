@@ -1,126 +1,106 @@
-/* Estilos generales */
-.custom-toolbar {
-  background-color: #000a14;
+/* Fondo dinámico */
+.background-gradient {
+  position: fixed ;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(135deg, #004ba8, #00bcd4);
+  z-index: -1;
 }
 
-.menu-button {
-  color: rgb(0, 0, 0);
-}
-
-.custom-title {
-  color: #df0909d8;
-  font-weight: bold;
-}
-
-.login-button {
-  margin-left: 10px;
-  border-radius: 5px;
-  background-color: white;
-  border: 2px solid #34495E;
-  color: #34495E;
-}
-
-/* Estilos para el contenido principal */
-.main-content {
-  background-color: #ECF0F1;
-  color: #333;
-}
-
-.content-container {
+/* Hero Section */
+.hero-section {
   text-align: center;
-  margin-top: 10%;
+  padding: 40px 20px;
+  color: #ffffff;
 }
 
-.main-title {
-  font-size: 2rem;
-  font-weight: bold;
+.hero-title {
+  font-size: 2.8rem;
+  font-weight: 700;
+  margin-bottom: 10px;
 }
 
-.main-subtitle {
+.hero-subtitle {
   font-size: 1rem;
-  margin: 10px 0;
+  margin-bottom: 20px;
 }
 
-.button-group {
+.cta-button {
+  --background: #00bcd4;
+  --color: #fff;
+  font-weight: bold;
+  border-radius: 50px;
+  padding: 10px 20px;
+}
+
+/* Tarjetas */
+.features-section {
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
-  margin: 20px 0;
+  padding: 20px;
+  gap: 20px;
 }
 
-.custom-button {
-  margin: 10px;
-  background-color: #34495E;
-  color: #fff;
-}
-
-/* Estilos para la imagen */
-.image-section {
-  margin-top: 20px;
-}
-
-.image-title {
-  font-size: 1.5rem;
-  color: #2C3E50;
-}
-
-.app-image {
-  width: 200px;
-  height: auto;
+.custom-card {
+  background: #ffffff;
   border-radius: 10px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  width: 300px;
+  padding: 20px;
+  text-align: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease-in-out;
 }
 
-/* Estilos del footer */
+.custom-card:hover {
+  transform: scale(1.05);
+}
+
+.card-icon {
+  font-size: 40px;
+  color: #004ba8;
+  margin-bottom: 10px;
+}
+
+.card-title {
+  color: #004ba8;
+  font-weight: bold;
+}
+
+ion-card-title {
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: rgb(130, 130, 130); 
+  margin: 10px 0;
+}
+
+  
+
+
+/* Footer */
 .custom-footer {
-  background-color: #2C3E50;
-  height: 50px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: white;
-}
-
-
-/* Estilos del footer */
-.custom-footer {
-  background-color: #2C3E50;
-  height: 50px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: white;
-}
-
-.footer-content {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  width: 100%;
-  max-width: 600px; /* Ajusta según lo que necesites */
-  padding: 0 15px;
+  background: #004ba8;
+  color: #ffffff;
+  text-align: center;
+  padding: 10px 0;
+  
 }
 
 .social-icons {
   display: flex;
-  gap: 15px;
-}
-
-/* Tamaño de los iconos */
-ion-icon {
-  font-size: 24px;
-  color: white;
-}
-
-/* Estilos del footer en el menú */
-.menu-footer {
-  background-color: #2C3E50;
-  height: 60px;
-  display: flex;
-  align-items: center;
   justify-content: center;
+  gap: 15px;
+  margin-top: 10px;
+}
+
+/* Menú lateral */
+.menu-footer {
+  background: #004ba8;
   color: white;
   padding: 10px;
+  text-align: center;
 }
 
 .footer-menu-content {
@@ -129,28 +109,7 @@ ion-icon {
   align-items: center;
 }
 
-.social-icons {
-  display: flex;
-  gap: 15px;
-  margin-top: 5px;
-}
-
-ion-icon {
+.footer-menu-content .social-icons ion-icon {
   font-size: 20px;
-  color: white;
-}
-
-/*barra de busqueda*/
-
-
-
-
-/* Barra de búsqueda personalizada para fondo oscuro */
-.custom-searchbar {
-  --background: #333333;
-  --color: #ffffff;
-  --placeholder-color: #aaaaaa;
-  --icon-color: #ffffff;
-  margin-bottom: 20px;
-  border-radius: 8px;
+  margin: 5px;
 }
