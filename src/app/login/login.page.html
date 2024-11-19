@@ -1,46 +1,51 @@
-<ion-header [translucent]="true">
-  <ion-toolbar class="custom-toolbar">
-    <!-- Botón de menú hamburguesa a la izquierda -->
-    <ion-buttons slot="start">
-      <ion-menu-button autoHide="false" class="menu-button"></ion-menu-button>
-    </ion-buttons>
-
-    <ion-title class="custom-title">
-      Safety City
-    </ion-title>
-  </ion-toolbar>
-</ion-header>
-
-<!-- Menú lateral -->
-<ion-menu contentId="login-content"> <!-- Asegúrate de que el contentId coincida con el id del contenido principal -->
-  <ion-header>
-    <ion-toolbar>
-      <ion-title>Menú</ion-title>
+  <!-- header inicio -->
+  <ion-menu contentId="main-content">
+    <!-- Encabezado del menú g-->
+    <ion-header>
+      <ion-toolbar>
+        <ion-title>Menú</ion-title>
+        <ion-buttons slot="start">
+          <ion-menu-button autoHide="false" class="menu-button"></ion-menu-button>
+        </ion-buttons>
+      </ion-toolbar>
+    </ion-header>
+  
+    <!-- Contenido del menú -->
+    <ion-content>
+      <ion-list>
+        <ion-item [routerLink]="['/home']">Inicio</ion-item>
+        <ion-item [routerLink]="['/login']">Iniciar Sesión</ion-item>
+        <ion-item [routerLink]="['/QnSomos']">¿Quiénes somos?</ion-item>
+      </ion-list>
+    </ion-content>
+  
+    <!-- Footer del menú -->
+    <ion-footer class="menu-footer">
+      <div class="footer-menu-content">
+        <div>© 2024 Safe City</div>
+        <div class="social-icons">
+          <ion-icon name="logo-instagram"></ion-icon>
+          <ion-icon name="logo-facebook"></ion-icon>
+          <ion-icon name="logo-whatsapp"></ion-icon>
+          <ion-icon name="logo-twitter"></ion-icon>
+        </div>
+      </div>
+    </ion-footer>
+  </ion-menu>
+  
+  <ion-header translucent>
+    <ion-toolbar class="custom-toolbar">
+      <ion-buttons slot="start">
+        <ion-menu-button autoHide="false" class="menu-button"></ion-menu-button>
+      </ion-buttons>
+      <ion-title class="custom-title">Safe City</ion-title>
+      <ion-buttons slot="end">
+        <ion-icon name="notifications-outline" class="icon-notification"></ion-icon>
+      </ion-buttons>
     </ion-toolbar>
   </ion-header>
-
-  <ion-content>
-    <!-- Contenido del menú -->
-    <ion-list>
-      <ion-item [routerLink]="['/home']">Inicio</ion-item>
-      <ion-item [routerLink]="['/login']">Iniciar Sesion</ion-item>
-      <ion-item [routerLink]="['/QnSomos']">Quienes somos?</ion-item>
-    </ion-list>
-  </ion-content>
-
-  <ion-footer class="menu-footer">
-    <div class="footer-menu-content">
-      <div>© 2024 Safety City</div>
-      <div class="social-icons">
-        <ion-icon name="logo-instagram"></ion-icon>
-        <ion-icon name="logo-facebook"></ion-icon>
-        <ion-icon name="logo-whatsapp"></ion-icon>
-        <ion-icon name="logo-twitter"></ion-icon>
-      </div>
-    </div>
-  </ion-footer>
-</ion-menu>
-
+    <!-- header final g-->
+     
 <!-- Contenido principal -->
 <div class="ion-page" id="login-content"> <!-- Cambiado el id a login-content -->
   <ion-content class="ion-padding">
@@ -88,4 +93,16 @@
     </div>
   </ion-content>
 </div>
+
+<ion-footer class="custom-footer">
+  <div class="footer-content">
+    <div>© 2024 Safe City</div>
+    <div class="social-icons">
+      <ion-icon name="logo-instagram"></ion-icon>
+      <ion-icon name="logo-facebook"></ion-icon>
+      <ion-icon name="logo-whatsapp"></ion-icon>
+      <ion-icon name="logo-twitter"></ion-icon>
+    </div>
+  </div>
+</ion-footer>
 

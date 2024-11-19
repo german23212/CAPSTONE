@@ -1,3 +1,4 @@
+<ion-menu contentId="main-content">
   <!-- Encabezado del menú g-->
   <ion-header>
     <ion-toolbar>
@@ -16,3 +17,28 @@
       <ion-item [routerLink]="['/QnSomos']">¿Quiénes somos?</ion-item>
     </ion-list>
   </ion-content>
+
+  <!-- Footer del menú -->
+  <ion-footer class="menu-footer">
+    <div class="footer-menu-content">
+      <div>© 2024 Safe City</div>
+      <div class="social-icons">
+        <ion-icon name="logo-instagram"></ion-icon>
+        <ion-icon name="logo-facebook"></ion-icon>
+        <ion-icon name="logo-whatsapp"></ion-icon>
+        <ion-icon name="logo-twitter"></ion-icon>
+      </div>
+    </div>
+  </ion-footer>
+</ion-menu>
+
+<ion-header translucent>
+  <ion-toolbar class="custom-toolbar">
+    <ion-buttons slot="start">
+      <ion-menu-button autoHide="false" class="menu-button"></ion-menu-button>
+    </ion-buttons>
+    <ion-title class="custom-title">Safe City</ion-title>
+    <ion-buttons slot="end">
+      <ion-icon name="notifications-outline" class="icon-notification"></ion-icon>
+    </ion-buttons>
+  </ion-toolbar>
