@@ -46,10 +46,54 @@
   </ion-header>
     <!-- header final g-->
 
-    <ion-content>
-
-      
+    <ion-content id="main-content" class="intro-page">
+      <!-- Encabezado de la página -->
+      <div class="intro-header">
+        <h1 class="main-title">Bienvenidos a Safe City</h1>
+        <p class="tagline">Tu aliado en seguridad para un entorno más seguro.</p>
+        <img src="../../assets/image/comuna.jpg" alt="Banner Safe City" class="intro-banner">
+      </div>
+    
+      <!-- Sección principal con tarjetas -->
+      <div class="intro-section">
+        <ion-card class="card-highlight">
+          <ion-card-header>
+            <ion-card-title>Estadísticas de Seguridad</ion-card-title>
+          </ion-card-header>
+          <ion-card-content>
+            Consulta datos actualizados sobre índices delictivos, zonas de riesgo y reportes ciudadanos en tiempo real.
+          </ion-card-content>
+        </ion-card>
+    
+        <ion-card class="card-highlight">
+          <ion-card-header>
+            <ion-card-title>Reporta un Incidente</ion-card-title>
+          </ion-card-header>
+          <ion-card-content>
+            Participa en la mejora de tu comunidad reportando incidentes fácilmente a través de nuestra plataforma.
+          </ion-card-content>
+        </ion-card>
+    
+        <ion-card class="card-highlight">
+          <ion-card-header>
+            <ion-card-title>Consejos de Seguridad</ion-card-title>
+          </ion-card-header>
+          <ion-card-content>
+            Aprende las mejores prácticas para proteger tu hogar, familia y comunidad con nuestra guía completa.
+          </ion-card-content>
+        </ion-card>
+      </div>
+    
+      <!-- Llamado a la acción -->
+      <div class="intro-footer">
+        <h2 class="cta-title">¿Listo para contribuir a una ciudad más segura?</h2>
+        <ion-button expand="block" color="primary" routerLink="/login">
+          Únete ahora
+        </ion-button>
+      </div>
     </ion-content>
+    
+    
 
 
   <ion-footer class="custom-footer">
