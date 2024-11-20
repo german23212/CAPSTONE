@@ -6,6 +6,7 @@ import { HomePage } from './home.page';
 
 import { HomePageRoutingModule } from './home-routing.module';
 import { RouterLink } from '@angular/router';
+import { ComponentsModule } from '../components/components.module';
 
 
 @NgModule({
@@ -14,7 +15,8 @@ import { RouterLink } from '@angular/router';
     FormsModule,
     IonicModule,
     HomePageRoutingModule,
-    RouterLink
+    RouterLink,
+    ComponentsModule
   ],
   declarations: [HomePage]
 })

@@ -76,10 +76,6 @@ ion-card-title {
   margin: 10px 0;
 }
 
-  
-
-
-/* Footer */
 .custom-footer {
   background: #004ba8;
   color: #ffffff;
@@ -94,22 +90,5 @@ ion-card-title {
   gap: 15px;
   margin-top: 10px;
 }
+  
 
-/* Menú lateral */
-.menu-footer {
-  background: #004ba8;
-  color: white;
-  padding: 10px;
-  text-align: center;
-}
-
-.footer-menu-content {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-.footer-menu-content .social-icons ion-icon {
-  font-size: 20px;
-  margin: 5px;
-}
