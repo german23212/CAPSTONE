@@ -3,37 +3,37 @@
   
 <ion-content id="main-content" fullscreen class="main-content">
   <!-- Fondo dinámico -->
-  <div class="background-gradient"></div>
+  <div class="fondo-pagina"></div>
 
-  <!-- Hero Section -->
-  <div class="hero-section">
-    <h1 class="hero-title">Safe city</h1>
-    <p class="hero-subtitle">
-      Innovamos para protegerte. La seguridad esta en tus manos.
+  <!-- Hero -->
+  <div class="seccion-principal">
+    <h1 class="titulo-principal">Safe city</h1>
+    <p class="subtitulo-principal">
+      Innovamos para protegerte. La seguridad está en tus manos.
     </p>
   </div>
-
+  
   <!-- Funcionalidades destacadas -->
-  <div class="features-section">
-    <ion-card class="custom-card" [routerLink]="['/informacion']">
-      <ion-icon name="information-circle-outline" class="card-icon"></ion-icon>
+  <div class="seccion-funcionalidades">
+    <ion-card class="tarjeta-personalizada" [routerLink]="['/informacion']">
+      <ion-icon name="information-circle-outline" class="icono-tarjeta"></ion-icon>
       <ion-card-title>Información</ion-card-title>
       <ion-card-content>
         Accede a datos relevantes sobre tu seguridad y entorno.
       </ion-card-content>
     </ion-card>
-
-    <ion-card class="custom-card" [routerLink]="['/personas']" >
-      <ion-icon name="people-outline" class="card-icon"></ion-icon>
+  
+    <ion-card class="tarjeta-personalizada" [routerLink]="['/personas']">
+      <ion-icon name="people-outline" class="icono-tarjeta"></ion-icon>
       <ion-card-title>Personas</ion-card-title>
       <ion-card-content>
         Conecta con tu comunidad para compartir datos en tiempo real.
       </ion-card-content>
     </ion-card>
-
-    <ion-card  class="custom-card" [routerLink]="['/colaboradores']">
-      <ion-icon name="shield-checkmark-outline" class="card-icon"></ion-icon>
-      <ion-card-title >Colaboradores</ion-card-title>
+  
+    <ion-card class="tarjeta-personalizada" [routerLink]="['/colaboradores']">
+      <ion-icon name="shield-checkmark-outline" class="icono-tarjeta"></ion-icon>
+      <ion-card-title>Colaboradores</ion-card-title>
       <ion-card-content>
         Descubre a quienes trabajan para mantener tu seguridad.
       </ion-card-content>

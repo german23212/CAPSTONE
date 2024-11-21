@@ -35,69 +35,82 @@
   }
 
 /* Página de introducción */
-.intro-page {
-    --background: linear-gradient(to bottom, #f9f9f9, #ffffff);
-    padding: 16px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
-  
-  /* Encabezado */
-  .intro-header {
-    text-align: center;
-    margin-bottom: 24px;
-  }
-  
-  .main-title {
-    font-size: 2.4rem;
-    font-weight: 700;
-    color: #1e88e5;
-    margin: 0;
-  }
-  
-  .tagline {
-    font-size: 1.2rem;
-    color: #555;
-    margin-top: 8px;
-  }
-  
-  .intro-banner {
-    width: 100%;
-    max-width: 500px;
-    border-radius: 12px;
-    margin-top: 16px;
-  }
-  
-  /* Tarjetas */
-  .intro-section ion-card {
-    width: 100%;
-    max-width: 500px;
-    margin: 12px 0;
-    border-radius: 12px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease-in-out;
-  }
-  
-  .intro-section ion-card:hover {
-    transform: translateY(-5px);
-  }
-  
-  .card-highlight {
-    --background: #ffffff;
-    --border-radius: 12px;
-  }
-  
-  ion-card-header ion-card-title {
-    font-size: 1.5rem;
-    color: #333;
-  }
-  
-  ion-card-content {
-    font-size: 1rem;
-    color: #666;
-    line-height: 1.5;
-  }
+.pagina-intro {
+  --background: linear-gradient(to bottom, #f9f9f9, #ffffff);
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Encabezado */
+.encabezado-intro {
+  text-align: center;
+  margin-bottom: 24px;
+}
+
+.titulo-principal {
+  font-size: 2.4rem;
+  font-weight: 700;
+  color: #1e88e5;
+  margin: 0;
+}
+
+.eslogan {
+  font-size: 1.2rem;
+  color: #555;
+  margin-top: 8px;
+}
+
+.banner-intro {
+  width: 100%;
+  max-width: 500px;
+  border-radius: 12px;
+  margin-top: 16px;
+}
+
+/* Tarjetas */
+.seccion-intro ion-card {
+  width: 100%;
+  max-width: 500px;
+  margin: 12px 0;
+  border-radius: 12px;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease-in-out;
+}
+
+.seccion-intro ion-card:hover {
+  transform: translateY(-5px);
+}
+
+.tarjeta-destacada {
+  --background: #ffffffe1;
+  --border-radius: 12px;
+}
+
+ion-card-header ion-card-title {
+  font-size: 1.5rem;
+  color: #333;
+}
+
+ion-card-content {
+  font-size: 1rem;
+  color: #666;
+  line-height: 1.5;
+}
+
+/* Pie de introducción */
+.pie-intro {
+  text-align: center;
+  margin-top: 24px;
+}
+
+.titulo-accion {
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: #1e88e5;
+  margin-bottom: 16px;
+}
   
   /* Footer */
   .intro-footer {
