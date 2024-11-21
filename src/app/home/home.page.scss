@@ -1,5 +1,5 @@
 /* Fondo dinámico */
-.background-gradient {
+.fondo-pagina {
   position: fixed ;
   top: 0;
   left: 0;
@@ -9,25 +9,25 @@
   z-index: -1;
 }
 
-/* Hero Section */
-.hero-section {
+/* Sección principal */
+.seccion-principal {
   text-align: center;
   padding: 40px 20px;
   color: #ffffff;
 }
 
-.hero-title {
+.titulo-principal {
   font-size: 2.8rem;
   font-weight: 700;
   margin-bottom: 10px;
 }
 
-.hero-subtitle {
+.subtitulo-principal {
   font-size: 1rem;
   margin-bottom: 20px;
 }
 
-.cta-button {
+.boton-accion {
   --background: #00bcd4;
   --color: #fff;
   font-weight: bold;
@@ -36,7 +36,7 @@
 }
 
 /* Tarjetas */
-.features-section {
+.seccion-funcionalidades {
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
@@ -44,7 +44,7 @@
   gap: 20px;
 }
 
-.custom-card {
+.tarjeta-personalizada {
   background: #ffffff;
   border-radius: 10px;
   width: 300px;
@@ -54,17 +54,17 @@
   transition: transform 0.3s ease-in-out;
 }
 
-.custom-card:hover {
+.tarjeta-personalizada:hover {
   transform: scale(1.05);
 }
 
-.card-icon {
+.icono-tarjeta {
   font-size: 40px;
   color: #004ba8;
   margin-bottom: 10px;
 }
 
-.card-title {
+.titulo-tarjeta {
   color: #004ba8;
   font-weight: bold;
 }
@@ -72,7 +72,7 @@
 ion-card-title {
   font-size: 1.2rem;
   font-weight: bold;
-  color: rgb(130, 130, 130); 
+  color: rgb(130, 130, 130);
   margin: 10px 0;
 }
 

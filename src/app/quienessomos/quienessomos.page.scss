@@ -1,116 +1,109 @@
+.contenido-nosotros {
+  padding: 16px;
+}
 
+.encabezado-nosotros {
+  text-align: center;
+  margin-bottom: 24px;
+}
 
-.about-us-content {
-    padding: 16px;
-  }
-  
-  .about-us-header {
-    text-align: center;
-    margin-bottom: 24px;
-  }
-  
-  .about-us-header h1 {
-    font-size: 2rem;
-    font-weight: bold;
-  }
-  
-  .about-us-header p {
-    font-size: 1.2rem;
-    color: #666;
-  }
-  
-  .about-us-mission ion-card,
-  .about-us-vision ion-card {
-    margin-bottom: 16px;
-  }
-  
-  .about-us-team {
-    margin-top: 24px;
-    text-align: center;
-  }
-  
-  .team-grid {
-    display: flex;
-    justify-content: space-around;
-    flex-wrap: wrap;
-  }
-  
-  .team-card {
-    width: 150px;
-    text-align: center;
-    margin: 16px 0;
-  }
-  
-  .team-photo {
-    width: 100%;
-    border-radius: 50%;
-    margin-bottom: 8px;
-  }
-  
+.encabezado-nosotros h1 {
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+.encabezado-nosotros p {
+  font-size: 1.2rem;
+  color: #666;
+}
+
+.mision-nosotros ion-card,
+.vision-nosotros ion-card {
+  margin-bottom: 16px;
+}
+
+.equipo-nosotros {
+  margin-top: 24px;
+  text-align: center;
+}
+
+.tarjetas-equipo {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+.tarjeta-equipo {
+  width: 150px;
+  text-align: center;
+  margin: 16px 0;
+}
+
+.foto-equipo {
+  width: 100%;
+  border-radius: 50%;
+  margin-bottom: 8px;
+}
+
 /* Estilos generales para las secciones */
-.centered-section {
-    text-align: center;
-    padding: 40px 20px;
-    margin: 20px auto;
-    background: linear-gradient(135deg, #f5f7fa, #c3cfe2); /* Fondo degradado suave */
-    border-radius: 16px;
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1); /* Sombra suave */
-    max-width: 800px; /* Limitar el ancho para centrado */
-  }
-  
-  /* Wrapper para contenido interno */
-  .content-wrapper {
-    max-width: 600px;
-    margin: 0 auto;
-  }
-  
-  /* Encabezados */
-  .centered-section h2 {
-    font-size: 2rem;
-    font-weight: bold;
-    margin-bottom: 20px;
-    color: #2c3e50; /* Color principal */
-  }
-  
-  /* Lista de valores */
-  .values-list {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-  }
-  
-  .values-list li {
-    display: flex;
-    align-items: center;
-    justify-content: flex-start;
-    gap: 16px; /* Separar íconos del texto */
-    font-size: 1.2rem;
-    color: #34495e; /* Color del texto */
-    margin-bottom: 16px;
-  }
-  
-  .values-list ion-icon {
-    font-size: 1.8rem;
-    color: #3498db; /* Color de los íconos (azul primario) */
-    flex-shrink: 0; /* Evitar que los íconos se reduzcan */
-  }
-  
-  
+.seccion-centrada {
+  text-align: center;
+  padding: 40px 20px;
+  margin: 20px auto;
+  background: linear-gradient(135deg, #f5f7fa, #c3cfe2); /* Fondo degradado suave */
+  border-radius: 16px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1); /* Sombra suave */
+  max-width: 800px; /* Limitar el ancho para centrado */
+}
 
-  
-  /* Diseño responsive */
-  @media (max-width: 768px) {
-    .centered-section {
-      padding: 20px 16px;
-    }
-  
-    .values-list li {
-      font-size: 1rem;
-      gap: 12px;
-    }
-  }
-  
+/* Wrapper para contenido interno */
+.contenedor {
+  max-width: 600px;
+  margin: 0 auto;
+}
 
+/* Encabezados */
+.seccion-centrada h2 {
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 20px;
+  color: #2c3e50; /* Color principal */
+}
+
+/* Lista de valores */
+.lista-valores {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.lista-valores li {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 16px; /* Separar íconos del texto */
+  font-size: 1.2rem;
+  color: #34495e; /* Color del texto */
+  margin-bottom: 16px;
+}
+
+.lista-valores ion-icon {
+  font-size: 1.8rem;
+  color: #3498db; /* Color de los íconos (azul primario) */
+  flex-shrink: 0; /* Evitar que los íconos se reduzcan */
+}
+
+/* Diseño responsive */
+@media (max-width: 768px) {
+  .seccion-centrada {
+    padding: 20px 16px;
+  }
+
+  .lista-valores li {
+    font-size: 1rem;
+    gap: 12px;
+  }
+}
 
 
 
