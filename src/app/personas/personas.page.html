@@ -19,39 +19,49 @@
     <ion-list>
       <!-- Categoría 1: Eventos Comunitarios -->
       <ion-item-divider>Eventos Comunitarios</ion-item-divider>
-      <ion-item>
-        <ion-label>Evento de seguridad comunitaria este fin de semana.</ion-label>
-      </ion-item>
-      <ion-item>
-        <ion-label>Reunión vecinal para discutir medidas de seguridad.</ion-label>
-      </ion-item>
-      <ion-item>
-        <ion-label>Clases gratuitas de defensa personal para residentes.</ion-label>
-      </ion-item>
+      <ion-card>
+        <ion-img src="assets/evento-seguridad.jpg"></ion-img>
+        <ion-card-header>
+          <ion-card-title>Evento de Seguridad Comunitaria</ion-card-title>
+        </ion-card-header>
+        <ion-card-content>
+          Únete a nuestro evento este fin de semana para discutir y aprender sobre medidas de seguridad comunitaria.
+        </ion-card-content>
+      </ion-card>
+
+      <ion-card>
+        <ion-img src="assets/reunion-vecinal.jpg"></ion-img>
+        <ion-card-header>
+          <ion-card-title>Reunión Vecinal</ion-card-title>
+        </ion-card-header>
+        <ion-card-content>
+          Participa en la reunión vecinal y da tu opinión sobre cómo mejorar la seguridad en nuestra comunidad.
+        </ion-card-content>
+      </ion-card>
 
       <!-- Categoría 2: Infraestructura y Servicios -->
       <ion-item-divider>Infraestructura y Servicios</ion-item-divider>
-      <ion-item>
-        <ion-label>Nuevo centro de atención de emergencias en la zona.</ion-label>
-      </ion-item>
-      <ion-item>
-        <ion-label>Instalación de nuevas cámaras de seguridad en puntos estratégicos.</ion-label>
-      </ion-item>
-      <ion-item>
-        <ion-label>Mejoras en el alumbrado público para mayor seguridad nocturna.</ion-label>
-      </ion-item>
-      <ion-item>
-        <ion-label>Actualización sobre los trabajos de pavimentación en la comuna.</ion-label>
-      </ion-item>
+      <ion-card>
+        <ion-img src="assets/centro-emergencias.jpg"></ion-img>
+        <ion-card-header>
+          <ion-card-title>Nuevo Centro de Emergencias</ion-card-title>
+        </ion-card-header>
+        <ion-card-content>
+          Se ha inaugurado un nuevo centro de atención de emergencias en la zona para brindar soporte las 24 horas.
+        </ion-card-content>
+      </ion-card>
 
       <!-- Categoría 3: Recreación -->
       <ion-item-divider>Recreación</ion-item-divider>
-      <ion-item>
-        <ion-label>Inauguración del parque recreativo en la calle principal.</ion-label>
-      </ion-item>
-      <ion-item>
-        <ion-label>Convocatoria para participar en talleres culturales gratuitos.</ion-label>
-      </ion-item>
+      <ion-card>
+        <ion-img src="assets/talleres-recreacion.jpg"></ion-img>
+        <ion-card-header>
+          <ion-card-title>Talleres Recreacionales</ion-card-title>
+        </ion-card-header>
+        <ion-card-content>
+          Participa en nuestros talleres recreativos y culturales. ¡Inscríbete ahora para aprender algo nuevo!
+        </ion-card-content>
+      </ion-card>
     </ion-list>
   </ion-content>
 </ion-content>
@@ -71,14 +81,7 @@
 
 <!-- Estilo personalizado -->
 <style>
-  /* Encabezado */
-  .header-title {
-    text-align: center;
-    font-size: 1.5rem;
-    font-weight: bold;
-    color: #444;
-  }
-
+ 
   /* Sección de Novedades */
   .novedades-title {
     font-weight: 600;
@@ -99,17 +102,31 @@
     text-transform: uppercase;
   }
 
-  /* Estilo de los ítems */
-  ion-item {
-    padding: 12px 0;
+  /* Cards */
+  ion-card {
+    margin: 16px 0;
+    border-radius: 12px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+
+  ion-img {
+    border-top-left-radius: 12px;
+    border-top-right-radius: 12px;
+    height: 200px;
+    object-fit: cover;
+  }
+
+  ion-card-title {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #333;
+  }
+
+  ion-card-content {
     font-size: 1rem;
     color: #555;
+    line-height: 1.4;
   }
 
-  ion-label {
-    font-weight: 400;
-    color: #555;
-  }
-
-
+ 
 </style>
