@@ -7,13 +7,16 @@ import { IonicModule } from '@ionic/angular';
 import { PersonasPageRoutingModule } from './personas-routing.module';
 
 import { PersonasPage } from './personas.page';
+import { HeaderComponent } from '../components/header/header.component';
+import { ComponentsModule } from '../components/components.module';
 
 @NgModule({
   imports: [
     CommonModule,
     FormsModule,
     IonicModule,
-    PersonasPageRoutingModule
+    PersonasPageRoutingModule,
+    ComponentsModule
   ],
   declarations: [PersonasPage]
 })
