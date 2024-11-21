@@ -31,8 +31,13 @@ const routes: Routes = [
     loadChildren: () => import('./informacion/informacion.module').then( m => m.InformacionPageModule)
   },
   {
+<<<<<<< HEAD
     path: 'personas',
     loadChildren: () => import('./personas/personas.module').then( m => m.PersonasPageModule)
+=======
+    path: 'quienessomos',
+    loadChildren: () => import('./quienessomos/quienessomos.module').then( m => m.QuienessomosPageModule)
+>>>>>>> 28961a114a9a5da5da51a27a088dcfb5e76fc41f
   },
 
 
