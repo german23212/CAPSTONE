@@ -9,6 +9,7 @@ import { InformacionPageRoutingModule } from './informacion-routing.module';
 import { InformacionPage } from './informacion.page';
 import { ComponentsModule } from '../components/components.module';
 
+
 @NgModule({
   imports: [
     CommonModule,
