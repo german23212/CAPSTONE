@@ -8,12 +8,13 @@ import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
 import { RegistroPage } from './registro/registro.page';
 import { ReactiveFormsModule } from '@angular/forms';
+import { ComponentsModule } from './components/components.module';
 
 
 @NgModule({
   declarations: [AppComponent],
   exports: [],
-  imports: [BrowserModule, IonicModule.forRoot(), AppRoutingModule, ReactiveFormsModule ],
+  imports: [BrowserModule, IonicModule.forRoot(), AppRoutingModule, ReactiveFormsModule,ComponentsModule ],
   providers: [{ provide: RouteReuseStrategy, useClass: IonicRouteStrategy }],
   bootstrap: [AppComponent],
 })

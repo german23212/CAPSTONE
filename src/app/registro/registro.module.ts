@@ -8,6 +8,7 @@ import { RegistroPageRoutingModule } from './registro-routing.module';
 
 import { RegistroPage } from './registro.page';
 import { RouterLink } from '@angular/router';
+import { ComponentsModule } from '../components/components.module';
 
 @NgModule({
   imports: [
@@ -16,7 +17,8 @@ import { RouterLink } from '@angular/router';
     IonicModule,
     RegistroPageRoutingModule,
     RouterLink,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    ComponentsModule
   ],
   declarations: [RegistroPage]
 })

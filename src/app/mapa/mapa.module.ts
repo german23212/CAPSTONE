@@ -8,6 +8,7 @@ import { MapaPageRoutingModule } from './mapa-routing.module';
 
 import { MapaPage } from './mapa.page';
 import { RouterLink } from '@angular/router';
+import { ComponentsModule } from '../components/components.module';
 
 @NgModule({
   imports: [
@@ -15,7 +16,8 @@ import { RouterLink } from '@angular/router';
     FormsModule,
     IonicModule,
     MapaPageRoutingModule,
-    RouterLink
+    RouterLink,
+    ComponentsModule
   ],
   declarations: [MapaPage]
 })
