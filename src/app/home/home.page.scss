@@ -1,3 +1,32 @@
+/* css boton */
+
+.custom-button {
+  --background: #4fc3f7;
+  --background-activated: #29b6f6;
+  --background-hover: #03a9f4;
+  --border-radius: 8px;
+  --color: #fff;
+  --padding-start: 15px;
+  --padding-end: 15px;
+  font-size: 16px;
+  font-weight: bold;
+  text-transform: uppercase;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.custom-button:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+}
+
+.custom-button:active {
+  transform: scale(0.95);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+
+
 /* Fondo dinámico */
 .fondo-pagina {
   position: fixed ;
