@@ -26,7 +26,8 @@ const routes: Routes = [
   {
     path: 'login',
     loadChildren: () => import('./login/login.module').then( m => m.LoginPageModule)
-  },  {
+  },
+  {
     path: 'informacion',
     loadChildren: () => import('./informacion/informacion.module').then( m => m.InformacionPageModule)
   },
@@ -37,6 +38,16 @@ const routes: Routes = [
   {
     path: 'personas',
     loadChildren: () => import('./personas/personas.module').then( m => m.PersonasPageModule)
+  },
+  {
+
+    path: 'chatbot', loadChildren: () => import('./chatbot/chatbot.module').then(m => m.ChatbotPageModule),
+
+    
+  },
+  {
+    path: 'chatbot',
+    loadChildren: () => import('./chatbot/chatbot.module').then( m => m.ChatbotPageModule)
   },
 
 

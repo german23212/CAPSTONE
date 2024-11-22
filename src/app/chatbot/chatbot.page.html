@@ -1,0 +1,32 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Chatbot - Safe City</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div class="chat-container">
+    <!-- Chat history -->
+    <div class="chat-history">
+      <div *ngFor="let message of messages" [ngClass]="{'bot-message': message.sender === 'bot', 'user-message': message.sender === 'user'}">
+        <p>{{ message.text }}</p>
+      </div>
+    </div>
+
+    <!-- Input for user -->
+    <div class="chat-input">
+      <p>Selecciona una opción escribiendo el número correspondiente:</p>
+      <ul>
+        <li>1. ¿Cómo puedo reportar un incidente?</li>
+        <li>2. ¿Qué información debo incluir en un reporte?</li>
+        <li>3. ¿Cómo puedo proteger mi hogar?</li>
+        <li>4. ¿Qué hacer en caso de una emergencia?</li>
+        <li>5. ¿Cómo puedo registrarme?</li>
+      </ul>
+      <ion-item>
+        <ion-input [(ngModel)]="userInput" placeholder="Escribe un número"></ion-input>
+        <ion-button (click)="sendMessage()">Enviar</ion-button>
+      </ion-item>
+    </div>
+  </div>
+</ion-content>

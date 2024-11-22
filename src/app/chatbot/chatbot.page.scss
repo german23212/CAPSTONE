@@ -1,0 +1,114 @@
+.chat-container {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    padding: 15px;
+    background: linear-gradient(to bottom, #f4f4f9, #e6eaf4);
+    font-family: 'Arial', sans-serif;
+  }
+  
+  .chat-history {
+    flex: 1;
+    overflow-y: auto;
+    padding: 10px;
+    background: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 15px;
+  }
+  
+  .bot-message {
+    max-width: 70%;
+    align-self: flex-start;
+    background-color: #eef2f9;
+    color: #333;
+    padding: 12px 15px;
+    border-radius: 15px;
+    margin: 5px 0;
+    word-wrap: break-word;
+    font-size: 14px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  .user-message {
+    max-width: 70%;
+    align-self: flex-end;
+    background-color: #0078d7;
+    color: #fff;
+    padding: 12px 15px;
+    border-radius: 15px;
+    margin: 5px 0;
+    word-wrap: break-word;
+    font-size: 14px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  .chat-input {
+    background: #ffffff;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .chat-input p {
+    margin-bottom: 10px;
+    font-size: 16px;
+    color: #333;
+    font-weight: bold;
+  }
+  
+  .chat-input ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+  
+  .chat-input ul li {
+    margin-bottom: 8px;
+    font-size: 14px;
+    color: #555;
+    display: flex;
+    align-items: center;
+  }
+  
+  .chat-input ul li::before {
+    content: '👉';
+    margin-right: 8px;
+    font-size: 16px;
+    color: #0078d7;
+  }
+  
+  ion-item {
+    --background: #eef2f9;
+    --padding-start: 10px;
+    border-radius: 5px;
+  }
+  
+  ion-input {
+    --background: #ffffff;
+    --padding-start: 10px;
+    border-radius: 5px;
+    font-size: 14px;
+    color: #555;
+  }
+  
+  ion-button {
+    --background: #0078d7;
+    --border-radius: 5px;
+    font-size: 14px;
+    margin-left: 10px;
+  }
+  
+  .chat-history::-webkit-scrollbar {
+    width: 8px;
+  }
+  
+  .chat-history::-webkit-scrollbar-thumb {
+    background: #0078d7;
+    border-radius: 10px;
+  }
+  
+  .chat-history::-webkit-scrollbar-track {
+    background: #eef2f9;
+  }
+  
