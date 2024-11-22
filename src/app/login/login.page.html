@@ -1,7 +1,7 @@
 <app-header></app-header>
 
 <!-- Contenido principal -->
-<div class="ion-page" id="login-content"> <!-- Cambiado el id a login-content -->
+<div class="ion-page" id="login-content"> 
   <ion-content class="ion-padding" id="main-content">
     <div class="login-container">
       <h1 class="main-titulo">Iniciar sesión</h1>
@@ -12,19 +12,19 @@
 
         <form>
           <ion-item>
-            <ion-label position="floating">Email</ion-label>
-            <ion-input type="email" required></ion-input>
+            <ion-label position="floating" style="color: black;">Email</ion-label>
+            <ion-input style="color: black;" type="email" required></ion-input>
             <ion-icon name="mail-outline" slot="end"></ion-icon>
           </ion-item>
 
           <ion-item>
-            <ion-label position="floating">Contraseña</ion-label>
-            <ion-input type="password" required></ion-input>
+            <ion-label position="floating" style="color: black;">Contraseña</ion-label>
+            <ion-input style="color: black;" type="password" required></ion-input>
             <ion-icon name="lock-closed-outline" slot="end"></ion-icon>
           </ion-item>
 
           <div class="recuperar-contra">
-            <a href="#">¿Olvidó su contraseña?</a>
+            <a style="color: black;" href="#">¿Olvidó su contraseña?</a>
           </div>
 
           <ion-button expand="block" class="login-button">Iniciar sesión</ion-button>

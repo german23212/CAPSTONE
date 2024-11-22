@@ -14,6 +14,7 @@
   font-size: 24px;
   font-weight: bold;
   margin-bottom: 20px;
+  color: #000000;
 }
 
 .form-container {
@@ -25,7 +26,7 @@
 
 .subtitle {
   font-size: 12px;
-  color: #666666;
+  color: #000000;
   margin-bottom: 5px;
   text-transform: uppercase;
 }
@@ -34,6 +35,7 @@
   font-size: 20px;
   font-weight: bold;
   margin-bottom: 20px;
+  color: #000a14;
 }
 
 ion-item {
@@ -44,20 +46,21 @@ ion-item {
 }
 
 ion-label {
-  color: #666666;
+  color: #000000;
 }
 
 ion-icon {
-  color: #666666;
+  color: #000000;
 }
 
 .recuperar-contra {
   text-align: right;
   margin-bottom: 20px;
+  
 }
 
 .recuperar-contra a {
-  color: #7e57c2;
+  color: #000000;
   font-size: 14px;
   text-decoration: none;
 }
