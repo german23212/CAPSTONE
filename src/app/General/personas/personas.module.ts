@@ -7,8 +7,8 @@ import { IonicModule } from '@ionic/angular';
 import { PersonasPageRoutingModule } from './personas-routing.module';
 
 import { PersonasPage } from './personas.page';
-import { HeaderComponent } from '../components/header/header.component';
-import { ComponentsModule } from '../components/components.module';
+import { ComponentsModule } from 'src/app/components/components.module';
+
 
 @NgModule({
   imports: [

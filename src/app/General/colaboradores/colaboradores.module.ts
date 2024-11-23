@@ -7,13 +7,15 @@ import { IonicModule } from '@ionic/angular';
 import { ColaboradoresPageRoutingModule } from './colaboradores-routing.module';
 
 import { ColaboradoresPage } from './colaboradores.page';
+import { ComponentsModule } from 'src/app/components/components.module';
 
 @NgModule({
   imports: [
     CommonModule,
     FormsModule,
     IonicModule,
-    ColaboradoresPageRoutingModule
+    ColaboradoresPageRoutingModule,
+    ComponentsModule
   ],
   declarations: [ColaboradoresPage]
 })

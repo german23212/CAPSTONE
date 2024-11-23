@@ -8,7 +8,8 @@ import { RegistroPageRoutingModule } from './registro-routing.module';
 
 import { RegistroPage } from './registro.page';
 import { RouterLink } from '@angular/router';
-import { ComponentsModule } from '../components/components.module';
+import { ComponentsModule } from 'src/app/components/components.module';
+
 
 @NgModule({
   imports: [

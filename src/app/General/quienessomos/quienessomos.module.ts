@@ -7,7 +7,8 @@ import { IonicModule } from '@ionic/angular';
 import { QuienessomosPageRoutingModule } from './quienessomos-routing.module';
 
 import { QuienessomosPage } from './quienessomos.page';
-import { ComponentsModule } from '../components/components.module';
+import { ComponentsModule } from 'src/app/components/components.module';
+
 
 @NgModule({
   imports: [

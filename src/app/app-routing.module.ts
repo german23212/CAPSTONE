@@ -4,7 +4,7 @@ import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
 const routes: Routes = [
   {
     path: 'home',
-    loadChildren: () => import('./home/home.module').then( m => m.HomePageModule)
+    loadChildren: () => import('./General/home/home.module').then( m => m.HomePageModule)
   },
   {
     path:'',
@@ -13,7 +13,7 @@ const routes: Routes = [
   },
   {
     path: 'registro',
-    loadChildren: () => import('./registro/registro.module').then( m => m.RegistroPageModule)
+    loadChildren: () => import('./Ingresar/registro/registro.module').then( m => m.RegistroPageModule)
   },
   {
     path: 'mapa',
@@ -21,32 +21,33 @@ const routes: Routes = [
   },
   {
     path: 'colaboradores',
-    loadChildren: () => import('./colaboradores/colaboradores.module').then( m => m.ColaboradoresPageModule)
+    loadChildren: () => import('./General/colaboradores/colaboradores.module').then( m => m.ColaboradoresPageModule)
   },
   {
     path: 'login',
-    loadChildren: () => import('./login/login.module').then( m => m.LoginPageModule)
+    loadChildren: () => import('./Ingresar/login/login.module').then( m => m.LoginPageModule)
   },
   {
     path: 'informacion',
-    loadChildren: () => import('./informacion/informacion.module').then( m => m.InformacionPageModule)
+    loadChildren: () => import('./General/informacion/informacion.module').then( m => m.InformacionPageModule)
   },
   {
     path: 'quienessomos',
-    loadChildren: () => import('./quienessomos/quienessomos.module').then( m => m.QuienessomosPageModule)
+    loadChildren: () => import('./General/quienessomos/quienessomos.module').then( m => m.QuienessomosPageModule)
   },
   {
     path: 'personas',
-    loadChildren: () => import('./personas/personas.module').then( m => m.PersonasPageModule)
+    loadChildren: () => import('./General/personas/personas.module').then( m => m.PersonasPageModule)
   },
   {
     path: 'chatbot',
-    loadChildren: () => import('./chatbot/chatbot.module').then( m => m.ChatbotPageModule)
+    loadChildren: () => import('./General/chatbot/chatbot.module').then( m => m.ChatbotPageModule)
   },
   {
     path: 'reset-password',
-    loadChildren: () => import('./reset-password/reset-password.module').then( m => m.ResetPasswordPageModule)
-  },  {
+    loadChildren: () => import('./Ingresar/reset-password/reset-password.module').then( m => m.ResetPasswordPageModule)
+  },
+  {
     path: 'reporte',
     loadChildren: () => import('./policia/reporte/reporte.module').then( m => m.ReportePageModule)
   },
