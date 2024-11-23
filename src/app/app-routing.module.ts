@@ -41,6 +41,7 @@ const routes: Routes = [
   },
   {
 
+
     path: 'chatbot', loadChildren: () => import('./chatbot/chatbot.module').then(m => m.ChatbotPageModule),
 
     
@@ -49,7 +50,10 @@ const routes: Routes = [
     path: 'chatbot',
     loadChildren: () => import('./chatbot/chatbot.module').then( m => m.ChatbotPageModule)
   },
-
+  {
+    path: 'reset-password',
+    loadChildren: () => import('./reset-password/reset-password.module').then( m => m.ResetPasswordPageModule)
+  }
 
 
 ];

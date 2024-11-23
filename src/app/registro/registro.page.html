@@ -1,71 +1,53 @@
 <app-header></app-header>
 
-<ion-button [routerLink]="['/login']">Volver</ion-button>
+<ion-content [fullscreen]="true">
 
-<ion-content id="main-content" class="ion-padding">
-  <div class="login-container">
-    <h1 class="main-titulo">¡Únete Ahora!</h1>
-
+  <div class="container">
     <div class="form-container">
-      <h3 class="title">Regístrate</h3>
+      <h1 class="ion-text-center">Registrar cuenta</h1>
+      <form class="login-form" [formGroup]="registerForm" (ngSubmit)="onSubmit()">
 
-      <form [formGroup]="registerForm" (ngSubmit)="onSubmit()">
-        <!--Nombre -->
-        <ion-item>
-          <ion-label position="floating">Nombre</ion-label>
-          <ion-input type="text" formControlName="nombre" required></ion-input>
-        </ion-item>
-        <ion-text color="danger" *ngIf="formControls['nombre'].invalid && formControls['nombre'].touched">
-          El nombre es requerido y debe tener al menos 2 caracteres.
-        </ion-text>
+        <ion-input class="input-background" label="Correo Electrónico" labelPlacement="stacked" type="text" placeholder="Ejemplo@email.com"
+        formControlName="email" [class.is-invalid]="
+        (registerForm.get('email')?.invalid && submitted) || 
+        (registerForm.get('email')?.invalid && registerForm.get('email')?.touched)"></ion-input>
+        
+        @if ((registerForm.get('email')?.invalid && submitted) || registerForm.get('email')?.invalid && registerForm.get('email')?.touched) {
+          <span class="danger">Ingrese un email válido</span>
+        }
+        
+        <ion-input class="input-background" label="Contraseña" id="password" labelPlacement="stacked" type="password" placeholder="Contraseña"
+          formControlName="password" 
+          [class.is-invalid]="
+          (registerForm.get('password')?.invalid && submitted) || 
+          registerForm.get('password')?.invalid && registerForm.get('password')?.touched">
+        <ion-input-password-toggle slot="end"></ion-input-password-toggle>
+        </ion-input>
 
-        <!--Apellido -->
-        <ion-item>
-          <ion-label position="floating">Apellido</ion-label>
-          <ion-input type="text" formControlName="apellido" required></ion-input>
-        </ion-item>
-        <ion-text color="danger" *ngIf="formControls['apellido'].invalid && formControls['apellido'].touched">
-          El apellido es requerido y debe tener al menos 2 caracteres.
-        </ion-text>
 
-        <!--Email -->
-        <ion-item>
-          <ion-label position="floating">Email</ion-label>
-          <ion-input type="email" formControlName="email" required></ion-input>
-        </ion-item>
-        <ion-text color="danger" *ngIf="formControls['email'].invalid && formControls['email'].touched">
-          El email es requerido y debe ser un formato válido.
-        </ion-text>
+        @if ((registerForm.get('password')?.invalid && submitted) || registerForm.get('password')?.invalid && registerForm.get('password')?.touched) {
+            <span class="danger">Ingrese una contraseña</span>
+        }
 
-        <!--Contraseña -->
-        <ion-item>
-          <ion-label position="floating">Contraseña</ion-label>
-          <ion-input type="password" formControlName="password" required></ion-input>
-          <ion-icon name="lock-closed-outline" slot="end"></ion-icon>
-        </ion-item>
-        <ion-text color="danger" *ngIf="formControls['password'].invalid && formControls['password'].touched">
-          La contraseña es requerida y debe tener al menos 6 caracteres.
-        </ion-text>
+        <ion-input class="input-background" label="Repetir Contraseña" id="repeat-password" labelPlacement="stacked" type="password"
+        formControlName="repeatPassword" 
+        [class.is-invalid]="
+        (registerForm.get('repeatPassword')?.invalid && submitted) || 
+        registerForm.get('repeatPassword')?.invalid && registerForm.get('repeatPassword')?.touched">
+        <ion-input-password-toggle slot="end"></ion-input-password-toggle>
+        </ion-input>
 
-        <!--Contraseña -->
-        <ion-item>
-          <ion-label position="floating">Repite tu contraseña</ion-label>
-          <ion-input type="password" formControlName="confirmPassword" required></ion-input>
-          <ion-icon name="lock-closed-outline" slot="end"></ion-icon>
-        </ion-item>
-        <ion-text color="danger"
-          *ngIf="formControls['confirmPassword'].errors?.['passwordsDoNotMatch'] && formControls['confirmPassword'].touched">
-          Las contraseñas no coinciden.
-        </ion-text>
 
-        <!-- Botones -->
-        <ion-button expand="block" class="login-button" type="submit" [disabled]="registerForm.invalid">Iniciar
-          sesión</ion-button>
-        <ion-button expand="block" fill="outline" class="boton-inicio">
-          <ion-icon name="logo-google" slot="start"></ion-icon>
-          Registrarse con Google
-        </ion-button>
+        @if ((registerForm.get('repeatPassword')?.invalid && submitted) 
+              || registerForm.get('repeatPassword')?.invalid && registerForm.get('repeatPassword')?.touched
+              || (registerForm.get('repeatPassword')?.value != registerForm.get('password')?.value && registerForm.get('repeatPassword')?.touched)
+              || (registerForm.get('repeatPassword')?.value != registerForm.get('password')?.value && submitted)) {
+            <span class="danger">Las contraseñas no son iguales</span>
+        }
+
+        <ion-button color="primary" type="submit">Registrar</ion-button>
       </form>
     </div>
   </div>
+
 </ion-content>

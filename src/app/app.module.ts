@@ -4,18 +4,36 @@ import { RouteReuseStrategy } from '@angular/router';
 
 import { IonicModule, IonicRouteStrategy } from '@ionic/angular';
 
-import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
-import { RegistroPage } from './registro/registro.page';
-import { ReactiveFormsModule } from '@angular/forms';
+import { AppComponent } from './app.component';
+import { IonicStorageModule } from '@ionic/storage-angular';
+import { provideHttpClient } from '@angular/common/http';
+
+import { AngularFireModule } from '@angular/fire/compat';
+import { AngularFireAuthModule } from '@angular/fire/compat/auth';
+import { AngularFirestoreModule } from '@angular/fire/compat/firestore';
+import { AngularFireStorageModule } from '@angular/fire/compat/storage';
+
+import { environment } from '../environments/environment';
+import { FormsModule } from '@angular/forms';
 import { ComponentsModule } from './components/components.module';
 
 
 @NgModule({
   declarations: [AppComponent],
-  exports: [],
-  imports: [BrowserModule, IonicModule.forRoot(), AppRoutingModule, ReactiveFormsModule,ComponentsModule ],
-  providers: [{ provide: RouteReuseStrategy, useClass: IonicRouteStrategy }],
-  bootstrap: [AppComponent],
+  imports: [
+    BrowserModule, 
+    IonicModule.forRoot({swipeBackEnabled: false}), 
+    AppRoutingModule,
+    IonicStorageModule.forRoot(),
+    AngularFireModule.initializeApp(environment.firebaseConfig),
+    AngularFireAuthModule,
+    AngularFirestoreModule,
+    AngularFireStorageModule,
+    FormsModule,
+    ComponentsModule
+  ],
+providers: [{ provide: RouteReuseStrategy, useClass: IonicRouteStrategy }, provideHttpClient()],
+bootstrap: [AppComponent],
 })
 export class AppModule {}
