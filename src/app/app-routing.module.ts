@@ -40,20 +40,25 @@ const routes: Routes = [
     loadChildren: () => import('./personas/personas.module').then( m => m.PersonasPageModule)
   },
   {
-
-
-    path: 'chatbot', loadChildren: () => import('./chatbot/chatbot.module').then(m => m.ChatbotPageModule),
-
-    
-  },
-  {
     path: 'chatbot',
     loadChildren: () => import('./chatbot/chatbot.module').then( m => m.ChatbotPageModule)
   },
   {
     path: 'reset-password',
     loadChildren: () => import('./reset-password/reset-password.module').then( m => m.ResetPasswordPageModule)
+  },  {
+    path: 'reporte',
+    loadChildren: () => import('./policia/reporte/reporte.module').then( m => m.ReportePageModule)
+  },
+  {
+    path: 'visualizar',
+    loadChildren: () => import('./policia/visualizar/visualizar.module').then( m => m.VisualizarPageModule)
+  },
+  {
+    path: 'generarinforme',
+    loadChildren: () => import('./policia/generarinforme/generarinforme.module').then( m => m.GenerarinformePageModule)
   }
+
 
 
 ];
