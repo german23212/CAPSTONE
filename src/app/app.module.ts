@@ -7,7 +7,7 @@ import { IonicModule, IonicRouteStrategy } from '@ionic/angular';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { IonicStorageModule } from '@ionic/storage-angular';
-import { provideHttpClient } from '@angular/common/http';
+import { HttpClientModule, provideHttpClient } from '@angular/common/http';
 
 import { AngularFireModule } from '@angular/fire/compat';
 import { AngularFireAuthModule } from '@angular/fire/compat/auth';
@@ -43,6 +43,8 @@ const app = initializeApp(environment.firebaseConfig)
     AuthModule,
     FirebaseAppModule,
 
+    HttpClientModule
+    
   ],
 providers: [{ provide: RouteReuseStrategy, useClass: IonicRouteStrategy,  }, provideHttpClient(),],
 bootstrap: [AppComponent],
