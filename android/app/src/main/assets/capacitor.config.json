@@ -1,0 +1,6 @@
+{
+	"appId": "com.tu.app",
+	"appName": "TuApp",
+	"webDir": "www",
+	"bundledWebRuntime": false
+}
