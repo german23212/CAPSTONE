@@ -55,10 +55,7 @@ const routes: Routes = [
     path: 'visualizar',
     loadChildren: () => import('./policia/visualizar/visualizar.module').then( m => m.VisualizarPageModule)
   },
-  {
-    path: 'generarinforme',
-    loadChildren: () => import('./policia/generarinforme/generarinforme.module').then( m => m.GenerarinformePageModule)
-  }
+
 
 
 
