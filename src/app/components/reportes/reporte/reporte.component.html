@@ -1,20 +1,46 @@
-<form (ngSubmit)="addReporte()">
-
+<form (ngSubmit)="addReporte()" #formulario="ngForm">
+  <!-- Campo para el título -->
   <ion-item>
-    <ion-label position="floating">Titulo</ion-label>
-    <ion-input name="titulo" placeholder="Titulo" [(ngModel)]="reporte.titulo" required></ion-input>
+    <ion-label position="floating">Título del reporte</ion-label>
+    <ion-input 
+      name="titulo" 
+      placeholder="Ingresa un título descriptivo" 
+      [(ngModel)]="reporte.titulo" 
+      required>
+    </ion-input>
   </ion-item>
 
+  <!-- Campo para la descripción -->
   <ion-item>
-    <ion-label position="floating">Contenido</ion-label>
-    <ion-input name="content" placeholder="Contenido" [(ngModel)]="reporte.content" required></ion-input>
+    <ion-label position="floating">Descripción</ion-label>
+    <ion-input 
+      name="content" 
+      placeholder="Describe el problema" 
+      [(ngModel)]="reporte.content" 
+      required>
+    </ion-input>
   </ion-item>
 
+  <!-- Campo para la fecha y hora -->
   <ion-item>
-    <ion-label position="floating">Email</ion-label>
-    <ion-input name="address" placeholder="Email" [(ngModel)]="reporte.address" required></ion-input>
+    <ion-label position="floating">Fecha y hora</ion-label>
+    <ion-datetime 
+      name="date" 
+      [(ngModel)]="reporte.date" 
+      [value]="reporte.date" 
+      display-format="DD/MM/YYYY HH:mm"  
+      picker-format="DD MM YYYY HH mm"  
+      readonly="true"  
+      required>
+    </ion-datetime>
   </ion-item>
+
   <br>
-  <ion-button type="submit" expand="full" color="success">Reportar</ion-button>
+  <ion-button 
+    type="submit" 
+    expand="full" 
+    color="success" 
+    [disabled]="!formulario.valid">
+    Generar Reporte
+  </ion-button>
 </form>
-<br><br>
