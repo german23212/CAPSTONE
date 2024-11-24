@@ -17,7 +17,15 @@ import { AngularFireStorageModule } from '@angular/fire/compat/storage';
 import { environment } from '../environments/environment';
 import { FormsModule } from '@angular/forms';
 import { ComponentsModule } from './components/components.module';
+import { provideFirebaseApp } from '@angular/fire/app';
+import { initializeApp } from 'firebase/app';
+import { getAuth } from 'firebase/auth';
+import { FirebaseAppModule } from '@angular/fire/app';
+import { AuthModule, provideAuth } from '@angular/fire/auth';
+import { FIREBASE_OPTIONS } from '@angular/fire/compat';
 
+
+const app = initializeApp(environment.firebaseConfig)
 
 @NgModule({
   declarations: [AppComponent],
@@ -31,9 +39,11 @@ import { ComponentsModule } from './components/components.module';
     AngularFirestoreModule,
     AngularFireStorageModule,
     FormsModule,
-    ComponentsModule
+    ComponentsModule,
+    AuthModule,
+    FirebaseAppModule,
   ],
-providers: [{ provide: RouteReuseStrategy, useClass: IonicRouteStrategy }, provideHttpClient()],
+providers: [{ provide: RouteReuseStrategy, useClass: IonicRouteStrategy,  }, provideHttpClient(),],
 bootstrap: [AppComponent],
 })
 export class AppModule {}

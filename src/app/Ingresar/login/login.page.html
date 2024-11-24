@@ -48,8 +48,8 @@
             <ion-toggle slot="end"></ion-toggle>
           </ion-item>
 
-          <ion-button expand="block" fill="outline" class="boton-inicio">
-            <ion-icon name="logo-google" slot="start"></ion-icon>
+          <ion-button (click)="googleSignIn()" expand="block">
+            <ion-icon slot="start" name="logo-google"></ion-icon>
             Iniciar sesión con Google
           </ion-button>
         </form>

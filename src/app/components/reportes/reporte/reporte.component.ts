@@ -10,7 +10,7 @@ import { Timestamp } from 'firebase/firestore';
 })
 export class ReporteComponent  implements OnInit {
 
-  reporte:Reporte = {titulo:"", date: Timestamp.now(), content:"", address:"", lat: 0, lng: 0}
+  reporte:Reporte = {titulo:"", date: new Date(), content:"", address:"", lat: 0, lng: 0}
 
   constructor(private reporteService:ReporteService) { }
 
@@ -19,7 +19,10 @@ export class ReporteComponent  implements OnInit {
   addReporte(){
     this.reporteService.addReporte(this.reporte).then(()=>{
       alert("Agregado Correctamente")
-    })
+      this.reporte = {titulo:"", date: new Date(), content:"", address:"", lat: 0, lng: 0 }
+
+    }).catch(error=>{alert("error al agregar"+error)});
+    
   }
 
 }

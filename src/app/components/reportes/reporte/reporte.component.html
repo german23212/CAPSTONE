@@ -1,3 +1,20 @@
-<p>
-  reporte works!
-</p>
+<form (ngSubmit)="addReporte()">
+
+  <ion-item>
+    <ion-label position="floating">Titulo</ion-label>
+    <ion-input name="titulo" placeholder="Titulo" [(ngModel)]="reporte.titulo" required></ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-label position="floating">Contenido</ion-label>
+    <ion-input name="content" placeholder="Contenido" [(ngModel)]="reporte.content" required></ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-label position="floating">Email</ion-label>
+    <ion-input name="address" placeholder="Email" [(ngModel)]="reporte.address" required></ion-input>
+  </ion-item>
+  <br>
+  <ion-button type="submit" expand="full" color="success">Reportar</ion-button>
+</form>
+<br><br>

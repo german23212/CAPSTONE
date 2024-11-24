@@ -10,7 +10,7 @@ export interface IUsuario{
 export interface Reporte{
   id?:string;
   titulo:string;
-  date: Date | Timestamp;
+  date: Date;
   content:string;
   address:string;
   lat: number;

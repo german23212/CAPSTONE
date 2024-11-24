@@ -1,17 +1,29 @@
 import { Injectable } from '@angular/core';
 import { AngularFireAuth } from '@angular/fire/compat/auth';
 import { AngularFirestore } from '@angular/fire/compat/firestore';
-import { lastValueFrom } from 'rxjs';
+import { lastValueFrom, map } from 'rxjs';
 import { FirebaseError } from 'firebase/app';
 import { AlertController } from '@ionic/angular';
 import { Router } from '@angular/router';
 import { LocalStorageService } from '../localStorage/local-storage.service';
 import { IUsuario } from 'src/app/interfaces/db.interfaces';
+import firebase from 'firebase/compat/app';
+import { 
+  Auth,
+  signInWithPopup,
+  GoogleAuthProvider,
+  signOut,
+  User
+} from '@angular/fire/auth';
+import { BehaviorSubject, Observable } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
 })
 export class AuthService {
+  
+  private userSubject = new BehaviorSubject<any>(null);
+  user$ = this.userSubject.asObservable();
 
   constructor(
     private afAuth: AngularFireAuth,
@@ -19,7 +31,11 @@ export class AuthService {
     private storage:LocalStorageService,
     private alertCtrl: AlertController,
     private router:Router
-  ) { }
+  ) {
+    this.afAuth.authState.subscribe(user => {
+      this.userSubject.next(user);
+    });
+   }
 
   async register(email: string, password: string, role: string) {
     const credential = await this.afAuth.createUserWithEmailAndPassword(email, password);
@@ -100,4 +116,37 @@ export class AuthService {
     this.router.navigate(['auth','login']);
   }
 
+  async googleSignIn() {
+    try {
+      const provider = new GoogleAuthProvider();
+      const result = await this.afAuth.signInWithPopup(provider);
+      return result.user;
+    } catch (error) {
+      console.error('Error en login con Google:', error);
+      throw error;
+    }
+  }
+
+  async signOut() {
+    try {
+      await this.afAuth.signOut();
+    } catch (error) {
+      console.error('Error en logout:', error);
+      throw error;
+    }
+  }
+
+  isAuthenticated(): Observable<boolean> {
+    return this.user$.pipe(
+      map(user => user !== null)
+    );
+  }
+
+  getCurrentUser() {
+    return this.afAuth.currentUser;
+  }
+
+  getAuthState() {
+    return this.afAuth.authState;
+  }
 }

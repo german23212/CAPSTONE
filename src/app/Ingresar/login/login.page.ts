@@ -4,6 +4,7 @@ import { AlertController, NavController } from '@ionic/angular';
 import { FirebaseError } from 'firebase/app';
 import { IUsuario } from 'src/app/interfaces/db.interfaces';
 import { AuthService } from 'src/app/services/auth/auth.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-login',
@@ -27,11 +28,17 @@ export class LoginPage implements OnInit {
   constructor(
     private navController: NavController, //PERMITE LA NAVEGACION
     private alertController: AlertController, //MUESTRA LAS ALERTAS
-    private authService:AuthService) { 
+    private authService:AuthService,
+    private router: Router) { 
   }
 
   ngOnInit() {
     this.authService.logout();
+    this.authService.user$.subscribe(user => {
+      if (user) {
+        console.log('Usuario logueado:', user);
+      }
+    });
   }
 
   //ALERTA PARA NOTIFICAR ERRORES
@@ -82,5 +89,17 @@ export class LoginPage implements OnInit {
     if (role === "admin") this.navController.navigateRoot('admin');
     if (role === "client") this.navController.navigateRoot('client');
   }
+
+  async googleSignIn() {
+    try {
+      const result = await this.authService.googleSignIn();
+      if (result) {
+        await this.router.navigate(['/home']);
+      }
+    } catch (error) {
+      console.error('Error en la autenticación:', error);
+    }
+  }
+
 
 }
