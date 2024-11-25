@@ -68,9 +68,9 @@ export class RegistroPage implements OnInit {
       let password = this.registerForm.get("password")?.value as string;
       //CREAMOS EL NUEVO OBJETO CON LOS DATOS DEL FORMULARIO Y ROL POR DEFECTO 'CLIENT'
 
-      this.authService.register(email,password,'client')
+      this.authService.register(email,password,'civil')
       .then(r=>{
-        this.navController.navigateRoot('auth/login');
+        this.navController.navigateRoot('login');
       })
       .catch((e:FirebaseError)=>{
         switch (e.code){

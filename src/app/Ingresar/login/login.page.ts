@@ -34,11 +34,6 @@ export class LoginPage implements OnInit {
 
   ngOnInit() {
     this.authService.logout();
-    this.authService.user$.subscribe(user => {
-      if (user) {
-        console.log('Usuario logueado:', user);
-      }
-    });
   }
 
   //ALERTA PARA NOTIFICAR ERRORES
@@ -84,22 +79,21 @@ export class LoginPage implements OnInit {
     }
   }
 
-  //REDIRIGE AL USUARIO A DISTINTAS PARTES DE LA APP SEGUN SU ROL
-  navigate(role: string){
-    if (role === "admin") this.navController.navigateRoot('admin');
-    if (role === "client") this.navController.navigateRoot('client');
-  }
 
   async googleSignIn() {
     try {
       const result = await this.authService.googleSignIn();
       if (result) {
-        await this.router.navigate(['/home']);
+        await this.router.navigate(['/home-civil']);
       }
     } catch (error) {
       console.error('Error en la autenticación:', error);
     }
   }
-
+  //REDIRIGE AL USUARIO A DISTINTAS PARTES DE LA APP SEGUN SU ROL
+  navigate(role: string){
+    if (role === "policia") this.navController.navigateRoot('home-policia');
+    if (role === "civil") this.navController.navigateRoot('home-civil');
+  }
 
 }

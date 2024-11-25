@@ -16,3 +16,20 @@ export interface Reporte{
   lat: number;
   lng: number;
 }
+
+export interface IReporteFireBase{
+  pid?: string,
+  title: string,
+  address: string,
+  lat: number,
+  lng: number,
+}
+
+export interface IReporte{
+  pid?: string,
+  title: string,
+  address: string,
+  lat: number,
+  lng: number,
+  distance?: number
+}

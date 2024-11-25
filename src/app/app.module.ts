@@ -42,6 +42,7 @@ const app = initializeApp(environment.firebaseConfig)
     ComponentsModule,
     AuthModule,
     FirebaseAppModule,
+
     HttpClientModule
     
   ],

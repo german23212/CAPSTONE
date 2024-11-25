@@ -1,0 +1,90 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-button class="mx-10" size="small" slot="start" (click)="logOut()" color="light">
+      <ion-icon name="log-out" slot="icon-only"></ion-icon>
+    </ion-button>
+    <ion-title>Reportes</ion-title>
+  </ion-toolbar>
+
+  <ion-toolbar class="toolbar-padding" color="light">
+    <ion-label>
+      <p>Busca una dirección para añadir el reporte</p>
+    </ion-label>
+    <ion-searchbar 
+      search-icon="search-circle" 
+      debounce="200"
+      placeholder="Busca una dirección" 
+      (ionInput)="onSearchChange($event)"
+      show-clear-button="focus">
+    </ion-searchbar>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+
+  <ion-list class="ion-no-padding" style="max-height: 200px; overflow-y: scroll;" *ngIf="searchPlaces.length > 0">
+    <p class="mx-10">Mostando {{searchPlaces.length}} resultados</p>
+    <ion-item *ngFor="let place of searchPlaces" button (click)="createPunto(place)">
+      <ion-icon name="location" slot="start" color="primary"></ion-icon>
+      <ion-label>
+        {{place.title}}
+        <p>
+          <ion-text>
+            {{place.address}}
+          </ion-text>
+        </p>
+      </ion-label>
+      <ion-icon slot="end" color="success" name="add-circle"></ion-icon>
+    </ion-item>
+
+  </ion-list>
+
+  <ion-list [inset]="true" class="ion-no-padding">
+    <ion-item-divider color="primary">
+      <ion-label>
+        <h2>Puntos de Reporte</h2>
+      </ion-label>
+    </ion-item-divider>
+
+    <ion-item class="map-item" lines="none">
+      <div id="map"></div>
+    </ion-item>
+
+    <ion-item-divider color="primary">
+      <ion-label>
+        <h2>Puntos de Reporte</h2>
+      </ion-label>
+    </ion-item-divider>
+    @if (puntos.length > 0) {
+      <ion-item button color="primary" (click)="resetMapView()">
+        <ion-label class="ion-text-center">
+          Centrar vista del mapa
+        </ion-label>
+      </ion-item>
+      <div style="max-height: 200px; overflow-y: scroll;">
+          @for (punto of puntos; track $index) {
+            <ion-item button>
+              <ion-icon name="leaf" slot="start" color="primary"></ion-icon>
+              <ion-label (click)="addMarkerToMap(punto)">
+                {{punto.title}} | {{punto.distance ? (punto.distance < 10 ? punto.distance + ' km' : 'Más de 10km') : 'Calculando...'}}
+                <p>
+                  <ion-text>
+                    {{punto.address}}
+                  </ion-text>
+                </p>
+              </ion-label>
+              <ion-button slot="end" (click)="deletePunto(punto)">
+                <ion-icon slot="icon-only" name="close-circle"></ion-icon>
+              </ion-button>
+            </ion-item>
+          }
+      </div>
+    }@else {
+      <ion-item>
+        <ion-text>Reportes</ion-text>
+      </ion-item>
+    }
+
+  </ion-list>
+  <app-reporte></app-reporte>
+</ion-content>
