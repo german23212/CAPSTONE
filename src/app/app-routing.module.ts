@@ -1,5 +1,7 @@
 import { NgModule } from '@angular/core';
 import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
+import { policiaGuard } from './guards/policia/policia.guard';
+import { civilGuard } from './guards/civil/civil.guard';
 
 const routes: Routes = [
   {
@@ -45,20 +47,48 @@ const routes: Routes = [
   },
   {
     path: 'reset-password',
-    loadChildren: () => import('./Ingresar/reset-password/reset-password.module').then( m => m.ResetPasswordPageModule)
+    loadChildren: () => import('./Ingresar/reset-password/reset-password.module').then( m => m.ResetPasswordPageModule),
   },
   {
     path: 'reporte',
-    loadChildren: () => import('./policia/reporte/reporte.module').then( m => m.ReportePageModule)
+    loadChildren: () => import('./vista-civil/reporte/reporte.module').then( m => m.ReportePageModule),
+
   },
   {
     path: 'visualizar',
-    loadChildren: () => import('./policia/visualizar/visualizar.module').then( m => m.VisualizarPageModule)
+    loadChildren: () => import('./vista-civil/visualizar/visualizar.module').then( m => m.VisualizarPageModule)
   },
   {
-    path: 'generarinforme',
-    loadChildren: () => import('./policia/generarinforme/generarinforme.module').then( m => m.GenerarinformePageModule)
-  }
+    loadChildren: () => import('./vista-civil/visualizar/visualizar.module').then( m => m.VisualizarPageModule),
+
+  },
+  {
+    path: 'home-policia',
+    loadChildren: () => import('./vista-policia/home/home-policia/home-policia.module').then( m => m.HomePoliciaPageModule),
+
+  },
+  {
+    path: 'reporte-policia',
+    loadChildren: () => import('./vista-policia/reporte/reporte-policia/reporte-policia.module').then( m => m.ReportePoliciaPageModule),
+ 
+  },
+  {
+    path: 'perfil-policia',
+    loadChildren: () => import('./vista-policia/perfil/perfil-policia/perfil-policia.module').then( m => m.PerfilPoliciaPageModule),
+ 
+  },
+  {
+    path: 'home-civil',
+    loadChildren: () => import('./vista-civil/home/home-civil/home-civil.module').then( m => m.HomeCivilPageModule),
+
+  },
+  {
+    path: 'perfil-civil',
+    loadChildren: () => import('./vista-civil/perfil/perfil-civil/perfil-civil.module').then( m => m.PerfilCivilPageModule),
+ 
+  },
+
+
 
 
 
