@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
+import { ReportePoliciaPageModule } from './vista-policia/reporte/reporte-policia/reporte-policia.module';
 
 const routes: Routes = [
   {
@@ -49,16 +50,12 @@ const routes: Routes = [
   },
   {
     path: 'reporte',
-    loadChildren: () => import('./policia/reporte/reporte.module').then( m => m.ReportePageModule)
+    loadChildren: () => import('./vista-policia/reporte/reporte-policia/reporte-policia.module').then( m => m.ReportePoliciaPageModule)
   },
   {
     path: 'visualizar',
-    loadChildren: () => import('./policia/visualizar/visualizar.module').then( m => m.VisualizarPageModule)
+    loadChildren: () => import('./vista-policia/visualizar/visualizar.module').then( m => m.VisualizarPageModule)
   },
-  {
-    path: 'generarinforme',
-    loadChildren: () => import('./policia/generarinforme/generarinforme.module').then( m => m.GenerarinformePageModule)
-  }
 
 
 
