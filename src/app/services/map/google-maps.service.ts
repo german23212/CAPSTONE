@@ -115,7 +115,7 @@ export class GoogleMapsService {
       position: {lat: markerParam.lat , lng: markerParam.lng},
       map: this.map,
       title: markerParam.title,
-      icon: "/assets/maps/recycle-point.png" //ICONO PERSONALIZADO
+      icon: "/assets/maps/gps-icon.png" //ICONO PERSONALIZADO
     });
     this.marker = marker;
     this.adjustMapBounds(this.marker);
