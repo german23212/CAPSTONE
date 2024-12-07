@@ -56,8 +56,12 @@ const routes: Routes = [
   },
   {
     path: 'visualizar',
+<<<<<<< Updated upstream
     loadChildren: () => import('./vista-civil/visualizar/visualizar.module').then( m => m.VisualizarPageModule)
   },
+=======
+    loadChildren: () => import('./vista-civil/visualizar/visualizar.module').then( m => m.VisualizarPageModule),
+>>>>>>> Stashed changes
 
   {
     path: 'home-policia',
@@ -84,6 +88,8 @@ const routes: Routes = [
     loadChildren: () => import('./vista-civil/perfil/perfil-civil/perfil-civil.module').then( m => m.PerfilCivilPageModule),
  
   },
+
+
 
 
 

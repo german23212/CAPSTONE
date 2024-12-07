@@ -70,7 +70,7 @@ export class RegistroPage implements OnInit {
 
       this.authService.register(email,password,'civil')
       .then(r=>{
-        this.navController.navigateRoot('login');
+        this.navController.navigateRoot('auth/login');
       })
       .catch((e:FirebaseError)=>{
         switch (e.code){
