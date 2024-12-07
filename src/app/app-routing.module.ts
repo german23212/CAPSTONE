@@ -58,10 +58,7 @@ const routes: Routes = [
     path: 'visualizar',
     loadChildren: () => import('./vista-civil/visualizar/visualizar.module').then( m => m.VisualizarPageModule)
   },
-  {
-    loadChildren: () => import('./vista-civil/visualizar/visualizar.module').then( m => m.VisualizarPageModule),
 
-  },
   {
     path: 'home-policia',
     loadChildren: () => import('./vista-policia/home/home-policia/home-policia.module').then( m => m.HomePoliciaPageModule),
