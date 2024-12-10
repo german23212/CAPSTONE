@@ -65,7 +65,7 @@ export class LoginPage implements OnInit {
           case 'auth/too-many-requests':
             this.loginAlert({
               header:'Bloqueo temporal',
-              message:'Demaciados intentos fallidos, el usuario ha sido bloqueado temporalmente'
+              message:'Demasiados intentos fallidos, el usuario ha sido bloqueado temporalmente'
             });
             break;
           case 'auth/invalid-credential':
